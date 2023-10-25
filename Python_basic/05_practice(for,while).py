@@ -32,6 +32,10 @@ for i in range(1,8):
 for i in range(1, 10):
     print("2 * ", i, " = ", 2 * i)
 
+n = int(input())
+for i in range(1,10):
+    print("{} * {} = {}".format(n, i, n * i))
+
 
 """ 문제 2
 5 4 3 2 1 발사
