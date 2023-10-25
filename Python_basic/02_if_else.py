@@ -10,15 +10,16 @@ if-else문
 if문은 단독으로도 사용할 수 있지만, else 문은 반드시 if문과 함께 사용해야 합니다.
 """
 
-n = 3
-# n = 1
+# n = 3
+'''
+n = 1
 
 if n>2:
   print(True)
 else:
   print(False)
-
-
+'''
+  
 """
 if-elif-else문
 
@@ -32,3 +33,10 @@ if-elif-else문
 
 n = 10
 # n = 0
+
+if n<3 or n==10:
+  print(True)
+elif n<5:
+  print(True)
+else:
+  print(False)

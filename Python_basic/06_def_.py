@@ -17,3 +17,22 @@ def func1():
 def func2(n):
     for i in range(n):
         print("{} 번째 출력".format(i))
+
+# 구구단 함수 변환
+def gugudan():
+    for i in range(1, 10):
+        print("2 * ", i, " = ", 2 * i)
+
+gugudan()
+
+def CountDown(a,b,c):
+    for i in range(a, b, c):
+        if(i == 0):
+            print("발사")
+        else:
+            print(i, end=" ")
+
+CountDown(5, -1, -1)
+
+# .format
+# print("{} 번째 {} 출력".format(i, i +1))

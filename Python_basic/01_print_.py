@@ -12,6 +12,14 @@ a
 """
 
 # 출력 - 아래에 print문을 작성합니다.
+print("Hello World", end ="") 
+# , end=""을 하면 이어쓰기 가능
+# a 변수를 미리 선언하고 , end=a를 하면 이어서 a가 써짐
 
+b = "test"
+print("Hello World", end=" " + b)
 
-# 터미널에서 해당 파일이 있는 폴더로 이동하여 "python print_.py" 라고 입력해보세요.
+a = "Hello World"
+print(a)
+
+# 터미널에서 해당 파일이 있는 폴더로 이동하여 "python 01_print_.py" 라고 입력해보세요.

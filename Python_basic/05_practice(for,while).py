@@ -29,6 +29,8 @@ for i in range(1,8):
 """
 
 # 반복문
+for i in range(1, 10):
+    print("2 * ", i, " = ", 2 * i)
 
 
 """ 문제 2
@@ -36,3 +38,13 @@ for i in range(1,8):
 """
 
 # 반복문
+for i in range(5, -1, -1):
+    if(i == 0):
+        print("발사")
+    else:
+        print(i, end=" ")
+
+# 함수생성
+# def prac():
+#   for i in range(1, 8):
+#       print(i)
