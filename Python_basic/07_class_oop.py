@@ -23,16 +23,37 @@ class 클래스명():
 """
 
 
-class Car():
-    pass
+# class Car():
+#     pass
 
-my_car = Car()
+# my_car = Car()
 
-my_car.color = 'blue'
+# my_car.color = 'blue'
 
-print(my_car.color)
+# print(my_car.color)
 
+# class netflix():
+#     pass
 
+# develsplan = netflix()
+# develsplan.score = "3점"
+
+# print(develsplan.score)
+
+"""pass가 가능은 하지만 지양할 것"""
+
+# class netflix:
+#     def __init__(self, title):
+#         self.title = title
+    
+#     def setScore(self, n):
+#         print("{} 점".format(n))
+
+# develsplan = netflix("devels")
+# develsplan.setScore(3)
+
+# onepiece = netflix("one")
+# onepiece.setScore(4)
 
 """
 # 상속코드
@@ -56,3 +77,26 @@ e = Employee("David")
 s.study()
 e.work()
 """
+
+class Drama:
+    def __init__(self, title):
+        self.title = title
+
+    def setOperatingTime(self, time):
+        print(self.title + "는 {}시에 방영 될 예정입니다.".format(time))
+
+class dramaA(Drama):
+    def changeOperatingTime(self, time):
+        print(self.title + "는 {}시로 방영 시간이 변경되었습니다.".format(time))
+
+class dramaB(Drama):
+    def changeDirector(self, name):
+        print(self.title + "는 감독이 {} 으로 변경 되었습니다.".format(name))
+
+d1 = dramaA("드라마 1")
+d1.setOperatingTime(3)
+d1.changeOperatingTime(5)
+
+d2 = dramaB("드라마 2")
+d2.setOperatingTime(4)
+d2.changeDirector("새감독")

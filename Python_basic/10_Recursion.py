@@ -10,13 +10,13 @@
 
 # 일반적인 반복문
 # 1~5까지의 합
-def sum_list(items):
-    sum = 0
-    for i in items:
-        sum = sum + i
-    return sum
-my_list = [1,2,3,4,5]
-print(sum_list(my_list)) # 15
+# def sum_list(items):
+#     sum = 0
+#     for i in items:
+#         sum += i
+#     return sum
+# my_list = [1,2,3,4,5]
+# print(sum_list(my_list)) # 15
 
 
 """
@@ -26,11 +26,11 @@ print(sum_list(my_list)) # 15
 3. 반드시 자기 자신(함수)를 호출해야 한다.
 """
 
-def sum_list(items):
-    if len(items) == 1: # 조건 1. Base Case
-        return items[0]
-    else:
-        return items[0] + sum_list(items[1:])   # 조건 3. 반드시 자기 자신(함수)를 호출해야 한다.
+# def sum_list(items):
+#     if len(items) == 1: # 조건 1. Base Case
+#         return items[0]
+#     else:
+#         return items[0] + sum_list(items[1:])   # 조건 3. 반드시 자기 자신(함수)를 호출해야 한다.
 
 """
 조건 2. 추가 조건과 기본 케이스의 차이를 확인한다.
@@ -39,3 +39,41 @@ def sum_list(items):
 # 3 + sumlist([4,5])
 # 4 + sumlist([5])
 """
+
+# def star_print(n):
+#     if n == 0: return 
+#     star_print(n - 1)
+#     return print(n * "*")
+
+# star_print(8)
+
+# def gugu(n):
+#     if(n == 0) : return
+#     gugu(n - 1)
+#     for i in range(1, 10):
+#         print("{} * {} = {}".format(n, i, n * i))
+
+# gugu(9)
+
+# def count_down(n):
+#     if n == 0:
+#         return print("발사")
+#     print(n, end=" ")
+#     count_down(n - 1)
+
+
+# count_down(5)
+
+def solution(n):
+    if n > 100 :
+        return
+    if n % 2 == 0:
+        print(n, end=" ")
+        solution(n + 2)
+    else:
+        solution(n + 1)
+
+solution(85)
+
+a = [[] for _ in range(5) for _ in range(5)]
+print(a)

@@ -19,19 +19,29 @@ gorila_1.cry(3)
 우와 ~~~~우와 ~~~~우와 ~~~~
 """
 
+class Gorilla():
+    total_banana = 0
+    def __init__(self):
+        self.bananaCount = 0
 
+    def eat(self, bananaCount):
+        print("바나나를 {}개를 먹었습니다.", bananaCount)
+        self.bananaCount += bananaCount
+        self.total_banana += bananaCount
 
+    def cry(self, cryCount):
+        for i in range(cryCount):
+            self.bananaCount -= 1
+            if(self.bananaCount >= 0):
+                print("우와 ~~~~", end="")
+            else:
+                print("\n배가고파 소리를 지를 수 없습니다.")
+                return
 
-
-
-
-
-
-
-
-
-
-
+gorilla_1 = Gorilla()
+gorilla_1.eat(3)
+gorilla_1.cry(3)
+gorilla_1.cry(6)
 
 
 """
@@ -41,3 +51,16 @@ gorila_1.cry(3)
 
 킹콩은 바나나를 먹을때 2배의 효과를 냅니다.
 """
+
+class Kingkong(Gorilla):
+    def eat(self, bananaCount):
+        print("바나나를 {}개를 먹었습니다.", bananaCount)
+        self.bananaCount += bananaCount * 2
+        self.total_banana += bananaCount
+
+Kingkong_1 = Kingkong()
+Kingkong_1.eat(5)
+Kingkong_1.cry(6)
+Kingkong_1.cry(5)
+print(Kingkong_1.total_banana)
+print(gorilla_1.total_banana)
